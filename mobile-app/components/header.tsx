@@ -1,15 +1,19 @@
 // mobile-app/components/header.tsx
+import type { ReactNode } from 'react';
 import { SafeAreaView, StyleSheet, View, Text } from 'react-native';
 
 type HeaderProps = {
   title: string;
+  brand?: ReactNode;
+  rightAction?: ReactNode;
 };
 
-export default function Header({ title }: HeaderProps) {
+export default function Header({ title, brand, rightAction }: HeaderProps) {
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.logo} />
+      <View style={styles.brandContainer}>{brand}</View>
       <Text style={styles.title}>{title}</Text>
+      {rightAction}
     </SafeAreaView>
   );
 }
@@ -23,15 +27,15 @@ const styles = StyleSheet.create({
     padding: 10,
     backgroundColor: 'white',
   },
-  logo: {
+  brandContainer: {
     width: 44,
     height: 44,
-    backgroundColor: 'blue',
     borderRadius: 12,
-    alignSelf: 'flex-start',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-title:{
+  title: {
     fontSize: 20,
     fontWeight: 'bold',
-    }
+  },
 });
