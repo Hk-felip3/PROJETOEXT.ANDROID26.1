@@ -56,6 +56,27 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  card: {
+    backgroundColor: '#fff',
+    padding: 16,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    borderRadius: 16,
+  },
+  cardTitle: {
+    fontWeight: 'bold',
+    fontSize: 16,
+  },
+  cardDesc: {
+    fontSize: 12,
+    color: '#6b7280',
+  },
+  iconLight: {
+    backgroundColor: '#ede9fe',
+    padding: 10,
+    borderRadius: 999,
+  },
   actionButton: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -104,6 +125,22 @@ export default function HomeScreen({ navigation }: any) {
                     <ScanLine color='#ffffff' size={28} />
                   </View>
                 </LinearGradient>
+          </TouchableOpacity>
+
+          <View style={{ height: 1, backgroundColor: 'transparent', marginVertical: 3 }} />
+
+          <TouchableOpacity onPress={() => navigation.navigate('create-template')}>
+            <View style={styles.card}>
+              <View>
+                <Text style={styles.cardTitle}>Criar Gabarito</Text>
+                <Text style={styles.primaryDesc}>Configure as Resposta corretas
+                  </Text>
+              </View> 
+            
+                <View style={styles.iconLight}>
+                  <FileText color="#7c3aed" size={22}/>
+                </View>
+            </View>
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('Scan')}>
