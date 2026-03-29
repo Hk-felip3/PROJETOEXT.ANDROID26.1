@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "lucide-react-native": "^1.7.0",
+    "react-native-safe-area-context": "^5.7.0"
+  }
+}

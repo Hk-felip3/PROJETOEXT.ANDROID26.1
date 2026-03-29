@@ -11,7 +11,7 @@ export default function HomeScreen() {
     <SafeAreaView style={styles.container}>
       <View >
         <Header
-        title="ScanGrab"
+        title="ScanGab"
         brand={<HeaderBackButton onPress={() => navigation.goBack()} />}
         rightAction={
             <TouchableOpacity style={styles.rightAction}>
