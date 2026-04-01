@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 import { Disciplina, getDisciplinaIconColor } from '@/constants/disciplinas';
 import { IconSymbol } from '@/components/ui/icon-symbol';
@@ -9,13 +9,22 @@ type GabaritoCardProps = {
   questoes: number;
   data: string;
   disciplina: Disciplina;
+  onOptionsPress?: () => void;
 };
 
-export function GabaritoCard({ titulo, descricao, questoes, data, disciplina }: GabaritoCardProps) {
+export function GabaritoCard({ titulo, descricao, questoes, data, disciplina, onOptionsPress }: GabaritoCardProps) {
   const iconColor = getDisciplinaIconColor(disciplina);
 
   return (
     <View style={styles.card}>
+      <TouchableOpacity
+        style={styles.optionsButton}
+        onPress={onOptionsPress}
+        hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
+      >
+        <IconSymbol name="ellipsis" size={18} color="#6B7280" />
+      </TouchableOpacity>
+
       <View style={styles.icon}>
         <IconSymbol name="description" size={30} color={iconColor} />
       </View>
@@ -53,6 +62,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.06,
     shadowRadius: 12,
     elevation: 2,
+    position: 'relative',
   },
   cardHeader: {
     marginBottom: 6,
@@ -102,5 +112,16 @@ const styles = StyleSheet.create({
     color: '#9CA3AF',
     fontSize: 12,
     fontWeight: '500',
+  },
+  optionsButton: {
+    position: 'absolute',
+    top: 10,
+    right: 10,
+    width: 28,
+    height: 28,
+    borderRadius: 14,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#F9FAFB',
   },
 });
