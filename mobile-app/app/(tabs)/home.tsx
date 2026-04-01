@@ -3,6 +3,7 @@ import Header from '@/components/header';
 import { LinearGradient } from 'expo-linear-gradient';
 import { ScanLine, FileText, BarChart3, Settings, ListChecks } from 'lucide-react-native';
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 const styles = StyleSheet.create({
   container: {
@@ -73,7 +74,8 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function HomeScreen({ navigation }: any) {
+export default function HomeScreen() {
+    const navigation = useNavigation();
   return (
     <View style={styles.safeArea}>
       <LinearGradient
@@ -92,7 +94,7 @@ export default function HomeScreen({ navigation }: any) {
         <ScrollView contentContainerStyle={styles.scrollContent}>
           <Text style={styles.sectionTitle}>Ações Rápidas</Text>
 
-          <TouchableOpacity onPress={() => navigation.navigates('scanner')}>
+          <TouchableOpacity onPress={() => navigation.navigate('scanner')} activeOpacity={0.8}>
               <LinearGradient colors={[ '#7c3aed', '#4f46e5' ]}
                 style={styles.primaryCard}>
                   <View>
