@@ -27,7 +27,7 @@ export default function TabLayout() {
         name="gabaritos"
         options={{
           title: 'Gabaritos',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="assignment.fill" color={color}/>
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="description" color={color} />
         }}
       />
     </Tabs>

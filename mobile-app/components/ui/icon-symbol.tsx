@@ -17,6 +17,8 @@ const MAPPING = {
   'house.fill': 'home',
   'paperplane.fill': 'send',
   'assignment.fill': 'assignment-turned-in',
+  'description': 'description',
+  'ellipsis': 'more-horiz',
   'chevron.left.forwardslash.chevron.right': 'code',
   'chevron.right': 'chevron-right',
   'qrcode.viewfinder': 'qr-code-scanner',
