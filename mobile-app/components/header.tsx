@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { SafeAreaView, StyleSheet, View, Text } from 'react-native';
+import { SafeAreaView, StyleSheet, View, Text, Platform, StatusBar } from 'react-native';
 
 type HeaderProps = {
   title: string;
@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     padding: 10,
+    paddingTop: Platform.OS === 'android' ? (StatusBar.currentHeight ?? 0) + 10 : 10,
     backgroundColor: 'white',
   },
   brandContainer: {

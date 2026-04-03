@@ -27,9 +27,17 @@ export default function TabLayout() {
         name="gabaritos"
         options={{
           title: 'Gabaritos',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="assignment.fill" color={color}/>
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="doc.text" color={color} />
         }}
       />
+      <Tabs.Screen
+        name="scanner"
+        options={{
+          href: null,
+        }}
+      />
+
     </Tabs>
+
   );
 }
