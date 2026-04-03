@@ -3,8 +3,8 @@
   import { LinearGradient } from 'expo-linear-gradient';
   import { ScanLine, FileText, BarChart3, Settings, ListChecks, Activity } from 'lucide-react-native';
   import React, { act } from 'react';
- import { StatusBar } from 'expo-status-bar';
- import { SafeAreaView } from 'react-native-safe-area-context';
+import { StatusBar } from 'expo-status-bar';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
   const styles = StyleSheet.create({
     safeArea: {
@@ -180,53 +180,14 @@
 });
 
 function ActivityItem({ icon, title, desc }: any) {
-
   return (
     <View style={styles.activityItem}>
       <View style={styles.activityIcon}>{icon}</View>
-
 
       <View style={{ flex: 1 }}>
         <Text style={styles.activityTitle}>{title}</Text>
         <Text style={styles.activityDesc}>{desc}</Text>
       </View>
-=======
-          <TouchableOpacity onPress={() => navigation.navigate('scanner')} activeOpacity={0.8}>
-              <LinearGradient colors={[ '#7c3aed', '#4f46e5' ]}
-                style={styles.primaryCard}>
-                  <View>
-                    <Text style={styles.primaryTitle}>Escanear Cartão</Text>
-                    <Text style={styles.primarySubtitle}>Capture e corrija Respostas</Text>
-                  </View>
-
-                  <View style={styles.iconCircle}>
-                    <ScanLine color='#ffffff' size={28} />
-                  </View>
-                </LinearGradient>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('Scan')}>
-            <FileText size={24} color="#4f46e5" />
-            <Text style={styles.actionText}>Novo Scan</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('Results')}>
-            <BarChart3 size={24} color="#10b981" />
-            <Text style={styles.actionText}>Resultados</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('History')}>
-            <ListChecks size={24} color="#f59e0b" />
-            <Text style={styles.actionText}>Histórico</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.actionButton} onPress={() => navigation.navigate('Settings')}>
-            <Settings size={24} color="#8b5cf6" />
-            <Text style={styles.actionText}>Configurações</Text>
-          </TouchableOpacity>
-        </ScrollView>
-      </LinearGradient>
-
     </View>
   );
 }
