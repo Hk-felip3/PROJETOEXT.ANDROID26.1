@@ -1,11 +1,10 @@
-<<<<<<< HEAD
   import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
   import Header from '@/components/header';
   import { LinearGradient } from 'expo-linear-gradient';
   import { ScanLine, FileText, BarChart3, Settings, ListChecks, Activity } from 'lucide-react-native';
   import React, { act } from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView } from 'react-native-safe-area-context';
+ import { StatusBar } from 'expo-status-bar';
+ import { SafeAreaView } from 'react-native-safe-area-context';
 
   const styles = StyleSheet.create({
     safeArea: {
@@ -177,28 +176,16 @@ import { SafeAreaView } from 'react-native-safe-area-context';
       fontSize: 12,
       color: '#6b7280',
     },
-=======
-import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
-import Header from '@/components/header';
-import { LinearGradient } from 'expo-linear-gradient';
-import { ScanLine, FileText, BarChart3, Settings, ListChecks } from 'lucide-react-native';
-import React from 'react';
-import { useNavigation } from '@react-navigation/native';
->>>>>>> 4dfbc9a5fab47966fed7dbca6e32ae026ecce6d6
 
 });
 
-<<<<<<< HEAD
 function ActivityItem({ icon, title, desc }: any) {
-=======
-export default function HomeScreen() {
-    const navigation = useNavigation();
->>>>>>> 4dfbc9a5fab47966fed7dbca6e32ae026ecce6d6
+
   return (
     <View style={styles.activityItem}>
       <View style={styles.activityIcon}>{icon}</View>
 
-<<<<<<< HEAD
+
       <View style={{ flex: 1 }}>
         <Text style={styles.activityTitle}>{title}</Text>
         <Text style={styles.activityDesc}>{desc}</Text>
@@ -239,7 +226,7 @@ export default function HomeScreen() {
           </TouchableOpacity>
         </ScrollView>
       </LinearGradient>
->>>>>>> 4dfbc9a5fab47966fed7dbca6e32ae026ecce6d6
+
     </View>
   );
 }
